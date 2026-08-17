@@ -115,7 +115,7 @@ nav {
   color: var(--accent-volt);
 }
 
-/* NAVBAR BUTTON (DESKTOP DEFAULT) */
+/* NAVBAR BUTTON */
 .nav-btn {
   text-decoration: none;
   background: linear-gradient(135deg, var(--accent-orange), var(--accent-orange-hover));
@@ -351,7 +351,7 @@ nav {
 }
 
 /* ========================================================
-   BENTO GRID SERVICES & EQUIPMENT
+   BENTO GRID SERVICES WITH SPECIFIC IMAGES
    ======================================================== */
 .services-section {
   padding: 60px 6%;
@@ -386,7 +386,7 @@ nav {
 .bento-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: 24px;
   max-width: 1250px;
   margin: 0 auto;
 }
@@ -395,41 +395,80 @@ nav {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: 22px;
-  padding: 28px;
+  overflow: hidden;
   box-shadow: var(--card-shadow);
-  transition: 0.3s;
+  transition: 0.35s ease;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .bento-card:hover {
   border-color: var(--accent-orange);
   background: var(--bg-card-hover);
-  transform: translateY(-4px);
+  transform: translateY(-5px);
 }
 
-.bento-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
-  background: rgba(255, 87, 34, 0.12);
+/* Product Category Image Wrapper */
+.bento-img-wrap {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  background: #020617;
+}
+
+.bento-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.bento-card:hover .bento-img-wrap img {
+  transform: scale(1.06);
+}
+
+.bento-img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.1) 0%, rgba(15, 23, 42, 0.85) 100%);
+}
+
+.bento-category-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  background: rgba(8, 12, 20, 0.85);
+  border: 1px solid rgba(255, 87, 34, 0.4);
   color: var(--accent-orange);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  margin-bottom: 18px;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(8px);
 }
 
-.bento-card h3 {
+.bento-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.bento-body h3 {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 8px;
   color: #fff;
 }
 
-.bento-card p {
+.bento-body p {
   color: var(--text-secondary);
   font-size: 13.5px;
   margin-bottom: 18px;
@@ -445,6 +484,7 @@ nav {
   align-items: center;
   gap: 6px;
   transition: 0.2s;
+  margin-top: auto;
 }
 
 .card-cta-link:hover { color: #fff; }
@@ -865,8 +905,6 @@ footer {
   nav { padding: 18px 8%; }
   .hero-split { padding: 150px 8% 70px; }
   .hero-text-side h1 { font-size: 54px; }
-  .bento-grid { grid-template-columns: repeat(3, 1fr); }
-  .bento-grid .bento-card:first-child { grid-column: span 2; }
   .footer-grid { grid-template-columns: 1.5fr 1fr 1fr 1.2fr; }
 }
 
@@ -899,11 +937,15 @@ footer {
   }
 
   .nav-btn span.btn-full-txt {
-    display: none; /* Desktop text hide */
+    display: none;
   }
 
   .nav-btn span.btn-short-txt {
-    display: inline; /* Compact mobile text show */
+    display: inline;
+  }
+  
+  .bento-img-wrap {
+    height: 180px;
   }
 }
 </style>
@@ -971,6 +1013,15 @@ footer {
   <!-- CLICKABLE HERO IMAGE (Loads your local image.jpeg) -->
   <a href="#" data-wa class="hero-image-card" target="_blank" rel="noopener" title="Inquire Sports Gear on WhatsApp">
     <img src="image.jpeg" alt="Reddy Arena Sports Gear Banner">
+    <div class="image-tag-overlay">
+      <div class="overlay-info">
+        <span class="title"><i class="fa-solid fa-medal" style="color:var(--accent-orange);"></i> Match-Ready Quality</span>
+        <span class="subtitle">Tap to check catalog & rates on WhatsApp</span>
+      </div>
+      <div class="wa-badge-btn">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+      </div>
+    </div>
   </a>
 
   <!-- HERO CONTENT -->
@@ -1023,7 +1074,7 @@ footer {
 </section>
 
 <!-- ========================================================
-     SERVICES & PRODUCTS BENTO GRID
+     SERVICES & PRODUCTS BENTO GRID (WITH SPECIFIC IMAGES)
      ======================================================== -->
 <section class="services-section" id="gear">
   <div class="section-head">
@@ -1033,41 +1084,67 @@ footer {
   </div>
 
   <div class="bento-grid">
+    
+    <!-- Card 1: Cricket & Field Sports -->
     <div class="bento-card">
-      <div>
-        <div class="bento-icon"><i class="fa-solid fa-baseball-bat-ball"></i></div>
-        <h3>Cricket & Field Sports Gear</h3>
-        <p>Premium English & Kashmir willow bats, protective leg guards, gloves, match-grade leather balls, nets, and comprehensive team tournament kits designed for maximum durability.</p>
+      <div class="bento-img-wrap">
+        <span class="bento-category-tag"><i class="fa-solid fa-baseball-bat-ball"></i> Match Grade</span>
+        <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=800&q=80" alt="Cricket bat, balls and protective sports equipment" loading="lazy">
       </div>
-      <a href="#" data-wa class="card-cta-link" target="_blank" rel="noopener">Inquire Cricket Kits <i class="fa-solid fa-arrow-right"></i></a>
+      <div class="bento-body">
+        <div>
+          <h3>Cricket & Field Sports Gear</h3>
+          <p>Premium English & Kashmir willow bats, protective leg guards, gloves, match-grade leather balls, nets, and comprehensive team tournament kits designed for maximum durability.</p>
+        </div>
+        <a href="#" data-wa class="card-cta-link" target="_blank" rel="noopener">Inquire Cricket Kits <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
     </div>
 
+    <!-- Card 2: Racket & Court Sports -->
     <div class="bento-card">
-      <div>
-        <div class="bento-icon"><i class="fa-solid fa-table-tennis-paddle-ball"></i></div>
-        <h3>Racket & Court Sports</h3>
-        <p>High-tension badminton and tennis rackets, feather shuttlecocks, tournament nets, grip tapes, and stringing accessories built for competitive accuracy.</p>
+      <div class="bento-img-wrap">
+        <span class="bento-category-tag"><i class="fa-solid fa-table-tennis-paddle-ball"></i> Court Gear</span>
+        <img src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=800&q=80" alt="Badminton rackets and shuttlecock gear" loading="lazy">
       </div>
-      <a href="#" data-wa class="card-cta-link" target="_blank" rel="noopener">Check Racket Catalog <i class="fa-solid fa-arrow-right"></i></a>
+      <div class="bento-body">
+        <div>
+          <h3>Racket & Court Sports</h3>
+          <p>High-tension badminton and tennis rackets, feather shuttlecocks, tournament nets, grip tapes, and stringing accessories built for competitive accuracy.</p>
+        </div>
+        <a href="#" data-wa class="card-cta-link" target="_blank" rel="noopener">Check Racket Catalog <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
     </div>
 
+    <!-- Card 3: Gym & Strength -->
     <div class="bento-card">
-      <div>
-        <div class="bento-icon"><i class="fa-solid fa-dumbbell"></i></div>
-        <h3>Gym & Strength Training</h3>
-        <p>Hex dumbbells, Olympic barbells, cast iron kettlebells, multi-angle benches, resistance bands, and home workout essentials engineered for heavy load.</p>
+      <div class="bento-img-wrap">
+        <span class="bento-category-tag"><i class="fa-solid fa-dumbbell"></i> Heavy Duty</span>
+        <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80" alt="Hex dumbbells, barbell and gym equipment setup" loading="lazy">
       </div>
-      <a href="#" data-wa class="card-cta-link" target="_blank" rel="noopener">View Fitness Gear <i class="fa-solid fa-arrow-right"></i></a>
+      <div class="bento-body">
+        <div>
+          <h3>Gym & Strength Training</h3>
+          <p>Hex dumbbells, Olympic barbells, cast iron kettlebells, multi-angle benches, resistance bands, and home workout essentials engineered for heavy load.</p>
+        </div>
+        <a href="#" data-wa class="card-cta-link" target="_blank" rel="noopener">View Fitness Gear <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
     </div>
 
+    <!-- Card 4: Academy & Institutional Supply -->
     <div class="bento-card">
-      <div>
-        <div class="bento-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-        <h3>Academy & School Bulk Supply</h3>
-        <p>Wholesale sports equipment packages for sports academies, universities, schools, and corporate leagues with custom jersey printing and logo branding.</p>
+      <div class="bento-img-wrap">
+        <span class="bento-category-tag"><i class="fa-solid fa-graduation-cap"></i> Bulk Supply</span>
+        <img src="https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=800&q=80" alt="Academy team footballs and institutional sports gear" loading="lazy">
       </div>
-      <a href="#" data-wa class="card-cta-link" target="_blank" rel="noopener">Request Wholesale Pricing <i class="fa-solid fa-arrow-right"></i></a>
+      <div class="bento-body">
+        <div>
+          <h3>Academy & School Bulk Supply</h3>
+          <p>Wholesale sports equipment packages for sports academies, universities, schools, and corporate leagues with custom jersey printing and logo branding.</p>
+        </div>
+        <a href="#" data-wa class="card-cta-link" target="_blank" rel="noopener">Request Wholesale Pricing <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
     </div>
+
   </div>
 </section>
 
@@ -1109,7 +1186,7 @@ footer {
 </section>
 
 <!-- ========================================================
-     QUALITY GUARANTEE BANNER
+     QUALITY & POLICY GUARANTEE
      ======================================================== -->
 <section class="banner-guarantee">
   <div class="guarantee-box">
@@ -1246,8 +1323,8 @@ footer {
      JAVASCRIPT LOGIC
      ======================================================== -->
 <script>
-  const phoneNumber = "+918200297722"; // Update this with client's WhatsApp number
-  const message = encodeURIComponent("Hello Reddy Arena! I want Services.");
+  const phoneNumber = "+918200297722"; // Client's WhatsApp number
+  const message = encodeURIComponent("Hello Reddy Arena! I want Services.."); //
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
   // Assign WhatsApp URL to all [data-wa] links
