@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Reddy Arena — Pro-Grade Sports Equipment, Fitness Gear & Academy Supplies</title>
+<meta name="description" content="Get premium quality sports gear, cricket kits, gym equipment, and tournament supplies at Reddy Arena. Avail exclusive 10% discount on WhatsApp inquiry.">
+<meta name="robots" content="index, follow">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Teko:wght@500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+:root {
+  --bg-deep: #080c14;
+  --bg-card: #0f172a;
+  --bg-card-hover: #152238;
+  --bg-subtle: #1e293b;
+  --accent-orange: #ff5722;
+  --accent-orange-hover: #e64a19;
+  --accent-volt: #ccff00;
+  --accent-cyan: #00e5ff;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-glow: rgba(255, 87, 34, 0.35);
+  --card-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background: var(--bg-deep);
+  color: var(--text-primary);
+}
+
+body { line-height: 1.6; }
+
+/* ========================================================
+   NAVIGATION
+   ======================================================== */
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 16px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(8, 12, 20, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Teko', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.logo-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--accent-orange), #ff8a65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(255, 87, 34, 0.4);
+}
+
+.logo span {
+  color: var(--accent-orange);
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent-volt);
+}
+
+/* NAVBAR BUTTON (DESKTOP DEFAULT) */
+.nav-btn {
+  text-decoration: none;
+  background: linear-gradient(135deg, var(--accent-orange), var(--accent-orange-hover));
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+  box-shadow: 0 4px 20px rgba(255, 87, 34, 0.45);
+  white-space: nowrap;
+}
+
+.nav-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 87, 34, 0.65);
+}
+
+/* ========================================================
+   HERO SECTION (SPLIT WITH IMAGE)
+   ======================================================== */
+.hero-split {
+  padding: 125px 6% 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  align-items: center;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.hero-image-card {
+  order: 1;
+  width: 100%;
+  max-width: 520px;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  display: block;
+  background: var(--bg-card);
+  position: relative;
+  text-decoration: none;
+  transition: 0.35s transform ease, 0.35s box-shadow ease, 0.35s border-color ease;
+}
+
+.hero-image-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 55px rgba(255, 87, 34, 0.3);
+  border-color: var(--accent-orange);
+}
+
+.hero-image-card img {
+  width: 100%;
+  height: auto;
+  min-height: 320px;
+  max-height: 480px;
+  display: block;
+  object-fit: cover;
+}
+
+.image-tag-overlay {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  right: 14px;
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.overlay-info .title {
+  font-size: 13px;
+  font-weight: 800;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.overlay-info .subtitle {
+  font-size: 11px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.wa-badge-btn {
+  background: #25D366;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 8px 15px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.hero-text-side {
+  order: 2;
+  text-align: center;
+}
+
+.badge-tag {
+  background: rgba(255, 87, 34, 0.12);
+  border: 1px solid rgba(255, 87, 34, 0.4);
+  color: var(--accent-orange);
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.hero-text-side h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1.22;
+  margin-bottom: 16px;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.hero-text-side h1 span {
+  background: linear-gradient(135deg, var(--accent-orange), var(--accent-volt));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-text-side p {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-bottom: 28px;
+  align-items: center;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.highlight-item i {
+  color: var(--accent-volt);
+  font-size: 15px;
+}
+
+.btn-primary {
+  text-decoration: none;
+  background: linear-gradient(135deg, var(--accent-orange), #ff8a65);
+  color: #fff;
+  padding: 15px 36px;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 14.5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.3s;
+  box-shadow: 0 8px 26px rgba(255, 87, 34, 0.45);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(255, 87, 34, 0.65);
+}
+
+/* ========================================================
+   STATS / METRICS STRIP
+   ======================================================== */
+.stats-strip-section {
+  padding: 10px 6% 40px;
+}
+
+.stats-strip {
+  max-width: 1250px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 24px 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  box-shadow: var(--card-shadow);
+  text-align: center;
+}
+
+.stat-cell h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent-volt);
+}
+
+.stat-cell p {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ========================================================
+   BENTO GRID SERVICES & EQUIPMENT
+   ======================================================== */
+.services-section {
+  padding: 60px 6%;
+  background: var(--bg-deep);
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-head .section-tag {
+  color: var(--accent-orange);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.section-head h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.section-head p { color: var(--text-secondary); font-size: 14px; }
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.bento-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: var(--card-shadow);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bento-card:hover {
+  border-color: var(--accent-orange);
+  background: var(--bg-card-hover);
+  transform: translateY(-4px);
+}
+
+.bento-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(255, 87, 34, 0.12);
+  color: var(--accent-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+.bento-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.bento-card p {
+  color: var(--text-secondary);
+  font-size: 13.5px;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+.card-cta-link {
+  text-decoration: none;
+  color: var(--accent-volt);
+  font-weight: 800;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.2s;
+}
+
+.card-cta-link:hover { color: #fff; }
+
+/* ========================================================
+   ORDER & SUPPLY PROCESS
+   ======================================================== */
+.process-section {
+  padding: 60px 6%;
+  background: var(--bg-subtle);
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.process-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 26px;
+  position: relative;
+}
+
+.step-num {
+  font-family: 'Outfit', sans-serif;
+  font-size: 34px;
+  font-weight: 900;
+  color: rgba(255, 87, 34, 0.25);
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.process-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; color: #fff; }
+.process-card p { color: var(--text-secondary); font-size: 13px; line-height: 1.6; }
+
+/* ========================================================
+   ARENA QUALITY GUARANTEE BANNER
+   ======================================================== */
+.banner-guarantee {
+  padding: 40px 6% 60px;
+}
+
+.guarantee-box {
+  max-width: 1250px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  border: 1px solid rgba(255, 87, 34, 0.3);
+  border-radius: 24px;
+  padding: 40px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.guarantee-box h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.guarantee-box p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  max-width: 680px;
+  margin: 0 auto 22px;
+}
+
+.guarantee-points {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.g-point {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.g-point i { color: var(--accent-volt); }
+
+/* ========================================================
+   FAQS
+   ======================================================== */
+.faq-section { padding: 50px 6%; background: var(--bg-deep); }
+.faq-container {
+  max-width: 850px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: var(--card-shadow);
+}
+
+.faq-item h4 { font-size: 15px; font-weight: 700; margin-bottom: 6px; color: #fff; }
+.faq-item p { color: var(--text-secondary); font-size: 13px; line-height: 1.6; }
+
+/* ========================================================
+   LEGAL TERMS & POLICY COMPLIANCE
+   ======================================================== */
+.legal-section {
+  padding: 50px 6%;
+  background: #05080e;
+  border-top: 1px solid var(--border-color);
+}
+
+.legal-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.legal-container h3 { font-size: 15px; font-weight: 700; margin: 18px 0 6px; color: #fff; }
+.legal-container h3:first-child { margin-top: 0; }
+.legal-container p { color: var(--text-secondary); font-size: 13px; line-height: 1.7; margin-bottom: 10px; }
+
+/* ========================================================
+   BOTTOM CTA BOX
+   ======================================================== */
+.cta-section { padding: 30px 6% 70px; }
+.cta-box {
+  max-width: 1250px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, var(--accent-orange), #ff8a65);
+  border-radius: 24px;
+  padding: 42px 20px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 15px 35px rgba(255, 87, 34, 0.4);
+}
+
+.cta-box h2 { font-family: 'Outfit', sans-serif; font-size: 30px; font-weight: 800; margin-bottom: 10px; }
+.cta-box p { font-size: 14.5px; margin: 0 auto 22px; max-width: 600px; opacity: 0.95; }
+
+.cta-btn-light {
+  text-decoration: none;
+  background: #0f172a;
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.cta-btn-light:hover {
+  transform: translateY(-2px);
+  background: #ffffff;
+  color: #0f172a;
+}
+
+/* ========================================================
+   FOOTER
+   ======================================================== */
+footer {
+  background: #030509;
+  color: #fff;
+  padding: 50px 6% 25px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  max-width: 1250px;
+  margin: 0 auto 40px;
+}
+
+.footer-col h4 { font-size: 16px; font-weight: 700; margin-bottom: 16px; color: #fff; }
+.footer-col p { color: #64748b; font-size: 13px; line-height: 1.6; }
+
+.footer-links { display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { text-decoration: none; color: #94a3b8; font-size: 13px; transition: 0.3s; }
+.footer-links a:hover { color: var(--accent-orange); }
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: #475569;
+  font-size: 12px;
+}
+
+/* FLOATING WHATSAPP BUTTON */
+.float-wa {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 52px;
+  height: 52px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+  z-index: 1000;
+  transition: 0.3s;
+}
+
+.float-wa:hover { transform: scale(1.08); }
+
+/* ========================================================
+   POPUP OVERLAY (10% OFF OFFER)
+   ======================================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(3, 7, 18, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-banner-card {
+  width: 100%;
+  max-width: 460px;
+  background: linear-gradient(180deg, #111c30 0%, #090e17 100%);
+  border: 1.5px solid rgba(255, 87, 34, 0.4);
+  border-radius: 28px;
+  overflow: visible;
+  box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.9), 0 0 35px rgba(255, 87, 34, 0.25);
+  position: relative;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  padding: 42px 24px 26px;
+  text-align: center;
+}
+
+.modal-overlay.active .modal-banner-card {
+  transform: scale(1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 10;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: 0.2s;
+}
+
+.modal-close-btn:hover {
+  background: rgba(239, 68, 68, 0.9);
+  color: #fff;
+}
+
+/* ATHLETIC TOP PILL OFFER BADGE */
+.popup-pill-badge {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--accent-orange), #ff9800);
+  color: #ffffff;
+  padding: 6px 20px;
+  border-radius: 50px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  box-shadow: 0 6px 20px rgba(255, 87, 34, 0.6);
+  border: 2px solid #0f172a;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  animation: pillPulse 2s infinite ease-in-out;
+}
+
+@keyframes pillPulse {
+  0% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.05); box-shadow: 0 8px 24px rgba(255, 87, 34, 0.85); }
+  100% { transform: translateX(-50%) scale(1); }
+}
+
+.popup-sports-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px;
+  border-radius: 20px;
+  background: rgba(255, 87, 34, 0.15);
+  border: 1px solid rgba(255, 87, 34, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: var(--accent-orange);
+  box-shadow: 0 10px 25px rgba(255, 87, 34, 0.2);
+}
+
+.popup-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 23px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.popup-title span {
+  color: var(--accent-volt);
+}
+
+.popup-desc {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  margin-bottom: 22px;
+  line-height: 1.6;
+}
+
+.popup-wa-btn {
+  background: #25D366;
+  color: #ffffff;
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
+  transition: 0.2s;
+}
+
+.popup-wa-btn:hover {
+  background: #20ba57;
+  transform: translateY(-2px);
+}
+
+.popup-subtext {
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 12px;
+}
+
+/* ========================================================
+   RESPONSIVE MEDIA QUERIES & MOBILE FIXES
+   ======================================================== */
+@media (min-width: 768px) {
+  .hero-split {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    padding: 140px 6% 60px;
+  }
+  .hero-text-side {
+    order: 1;
+    text-align: left;
+  }
+  .hero-text-side h1 { font-size: 48px; }
+  .hero-text-side p { margin-left: 0; margin-right: 0; }
+  .hero-highlights { align-items: flex-start; }
+  .hero-image-card { order: 2; max-width: 100%; }
+  .stats-strip { grid-template-columns: repeat(4, 1fr); }
+  .bento-grid { grid-template-columns: repeat(2, 1fr); }
+  .process-grid { grid-template-columns: repeat(4, 1fr); }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .nav-btn span.btn-short-txt { display: none; }
+}
+
+@media (min-width: 992px) {
+  nav { padding: 18px 8%; }
+  .hero-split { padding: 150px 8% 70px; }
+  .hero-text-side h1 { font-size: 54px; }
+  .bento-grid { grid-template-columns: repeat(3, 1fr); }
+  .bento-grid .bento-card:first-child { grid-column: span 2; }
+  .footer-grid { grid-template-columns: 1.5fr 1fr 1fr 1.2fr; }
+}
+
+/* MOBILE VIEW COMPACT FIX */
+@media (max-width: 767px) {
+  .nav-links { display: none; }
+  
+  nav {
+    padding: 12px 4%;
+  }
+
+  .logo {
+    font-size: 24px;
+    gap: 8px;
+  }
+
+  .logo-badge {
+    width: 32px;
+    height: 32px;
+    font-size: 15px;
+  }
+
+  /* Compact Sleek Button for Mobile Header */
+  .nav-btn {
+    padding: 7px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    gap: 5px;
+    border-radius: 20px;
+  }
+
+  .nav-btn span.btn-full-txt {
+    display: none; /* Desktop text hide */
+  }
+
+  .nav-btn span.btn-short-txt {
+    display: inline; /* Compact mobile text show */
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ========================================================
+     MODAL POPUP OVERLAY (10% OFF)
+     ======================================================== -->
+<div class="modal-overlay" id="autoModal">
+  <div class="modal-banner-card" id="modalCard">
+    <div class="modal-close-btn" id="modalCloseBtn" title="Close Banner">✕</div>
+
+    <div class="popup-pill-badge">
+      <i class="fa-solid fa-bolt"></i> UP TO 10% OFF ON EVERY PRODUCT
+    </div>
+
+    <div class="popup-sports-icon">
+      <i class="fa-solid fa-trophy"></i>
+    </div>
+
+    <h2 class="popup-title">Gear Up With <span>Reddy Arena</span></h2>
+    <p class="popup-desc">Claim flat 10% off on your entire equipment order. Instant quote & doorstep dispatch support.</p>
+
+    <a href="#" data-wa class="popup-wa-btn" target="_blank" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i> Order Now on WhatsApp
+    </a>
+
+    <p class="popup-subtext">Clicking anywhere on this modal opens direct WhatsApp support</p>
+  </div>
+</div>
+
+<!-- ========================================================
+     NAVBAR (WITH COMPACT MOBILE BUTTON FIX)
+     ======================================================== -->
+<nav>
+  <div class="logo">
+    <div class="logo-badge">
+      <i class="fa-solid fa-dumbbell"></i>
+    </div>
+    Reddy <span>Arena</span>
+  </div>
+
+  <div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#gear">Gear & Equipment</a>
+    <a href="#process">How to Order</a>
+    <a href="#faq">FAQ</a>
+    <a href="#legal">Disclaimers</a>
+  </div>
+
+  <a href="#" data-wa class="nav-btn" target="_blank" rel="noopener">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="btn-full-txt">Get Wholesale Quote</span>
+    <span class="btn-short-txt">Quote</span>
+  </a>
+</nav>
+
+<!-- ========================================================
+     HERO SECTION
+     ======================================================== -->
+<section class="hero-split">
+
+  <!-- CLICKABLE HERO IMAGE (Loads your local image.jpeg) -->
+  <a href="#" data-wa class="hero-image-card" target="_blank" rel="noopener" title="Inquire Sports Gear on WhatsApp">
+    <img src="image.jpeg" alt="Reddy Arena Sports Gear Banner">
+  </a>
+
+  <!-- HERO CONTENT -->
+  <div class="hero-text-side">
+    <div class="badge-tag">
+      <i class="fa-solid fa-fire"></i>
+      Pro-Grade Sports & Fitness Gear
+    </div>
+
+    <h1>Elevate Your Game With <span>Reddy Arena</span></h1>
+
+    <p>Engineered for champions. From premium cricket kits and tournament-grade racket gear to heavy-duty gym setups and academy bulk supplies.</p>
+
+    <div class="hero-highlights">
+      <div class="highlight-item"><i class="fa-solid fa-circle-check"></i> Pro-Grade Bats, Kits, Balls & Protective Gear</div>
+      <div class="highlight-item"><i class="fa-solid fa-circle-check"></i> Home & Commercial Gym Fitness Equipment</div>
+      <div class="highlight-item"><i class="fa-solid fa-circle-check"></i> Academy, School & Tournament Bulk Supply Rates</div>
+    </div>
+
+    <a href="#" data-wa class="btn-primary" target="_blank" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i>
+      Claim 10% OFF & Order Now
+    </a>
+  </div>
+
+</section>
+
+<!-- ========================================================
+     STATS STRIP
+     ======================================================== -->
+<section class="stats-strip-section">
+  <div class="stats-strip">
+    <div class="stat-cell">
+      <h3>100%</h3>
+      <p>Tested Pro Gear</p>
+    </div>
+    <div class="stat-cell">
+      <h3>Flat 10%</h3>
+      <p>Discount Available</p>
+    </div>
+    <div class="stat-cell">
+      <h3>Bulk</h3>
+      <p>Institutional Supply</p>
+    </div>
+    <div class="stat-cell">
+      <h3>Instant</h3>
+      <p>WhatsApp Quotes</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================
+     SERVICES & PRODUCTS BENTO GRID
+     ======================================================== -->
+<section class="services-section" id="gear">
+  <div class="section-head">
+    <span class="section-tag">Product Categories</span>
+    <h2>Performance Equipment & Solutions</h2>
+    <p>Premium sports and athletic essentials curated for professionals, academies, and fitness studios.</p>
+  </div>
+
+  <div class="bento-grid">
+    <div class="bento-card">
+      <div>
+        <div class="bento-icon"><i class="fa-solid fa-baseball-bat-ball"></i></div>
+        <h3>Cricket & Field Sports Gear</h3>
+        <p>Premium English & Kashmir willow bats, protective leg guards, gloves, match-grade leather balls, nets, and comprehensive team tournament kits designed for maximum durability.</p>
+      </div>
+      <a href="#" data-wa class="card-cta-link" target="_blank" rel="noopener">Inquire Cricket Kits <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <div class="bento-card">
+      <div>
+        <div class="bento-icon"><i class="fa-solid fa-table-tennis-paddle-ball"></i></div>
+        <h3>Racket & Court Sports</h3>
+        <p>High-tension badminton and tennis rackets, feather shuttlecocks, tournament nets, grip tapes, and stringing accessories built for competitive accuracy.</p>
+      </div>
+      <a href="#" data-wa class="card-cta-link" target="_blank" rel="noopener">Check Racket Catalog <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <div class="bento-card">
+      <div>
+        <div class="bento-icon"><i class="fa-solid fa-dumbbell"></i></div>
+        <h3>Gym & Strength Training</h3>
+        <p>Hex dumbbells, Olympic barbells, cast iron kettlebells, multi-angle benches, resistance bands, and home workout essentials engineered for heavy load.</p>
+      </div>
+      <a href="#" data-wa class="card-cta-link" target="_blank" rel="noopener">View Fitness Gear <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <div class="bento-card">
+      <div>
+        <div class="bento-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <h3>Academy & School Bulk Supply</h3>
+        <p>Wholesale sports equipment packages for sports academies, universities, schools, and corporate leagues with custom jersey printing and logo branding.</p>
+      </div>
+      <a href="#" data-wa class="card-cta-link" target="_blank" rel="noopener">Request Wholesale Pricing <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================
+     ORDER WORKFLOW PROCESS
+     ======================================================== -->
+<section class="process-section" id="process">
+  <div class="section-head">
+    <span class="section-tag">Seamless Procurement</span>
+    <h2>How To Order Your Equipment</h2>
+    <p>Simple, rapid 4-step process to get verified sports gear delivered directly to your field.</p>
+  </div>
+
+  <div class="process-grid">
+    <div class="process-card">
+      <div class="step-num">01</div>
+      <h3>Choose Your Gear</h3>
+      <p>Select your required sports gear, academy quantities, or fitness equipment categories.</p>
+    </div>
+
+    <div class="process-card">
+      <div class="step-num">02</div>
+      <h3>WhatsApp Inquiry</h3>
+      <p>Send your requirements directly on WhatsApp to get the instant 10% discount applied.</p>
+    </div>
+
+    <div class="process-card">
+      <div class="step-num">03</div>
+      <h3>Quote Confirmation</h3>
+      <p>Review custom pricing, product specs, brand selections, and dispatch timelines.</p>
+    </div>
+
+    <div class="process-card">
+      <div class="step-num">04</div>
+      <h3>Fast Dispatch</h3>
+      <p>Your gear is quality-inspected, packed with protective transit wrapping, and dispatched.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================
+     QUALITY GUARANTEE BANNER
+     ======================================================== -->
+<section class="banner-guarantee">
+  <div class="guarantee-box">
+    <h3>The Reddy Arena Quality Guarantee</h3>
+    <p>We provide 100% authentic, tested athletic gear adhering strictly to national tournament specifications.</p>
+
+    <div class="guarantee-points">
+      <div class="g-point"><i class="fa-solid fa-shield-halved"></i> 100% Authentic Pro Equipment</div>
+      <div class="g-point"><i class="fa-solid fa-shield-halved"></i> Wholesale Transparent Pricing</div>
+      <div class="g-point"><i class="fa-solid fa-shield-halved"></i> Direct 1-on-1 WhatsApp Support</div>
+    </div>
+
+    <a href="#" data-wa class="btn-primary" target="_blank" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i> Speak With Gear Specialist
+    </a>
+  </div>
+</section>
+
+<!-- ========================================================
+     FAQS
+     ======================================================== -->
+<section class="faq-section" id="faq">
+  <div class="section-head">
+    <span class="section-tag">Help & Answers</span>
+    <h2>Frequently Asked Questions</h2>
+    <p>Clear information regarding our sports gear, delivery, and institutional orders.</p>
+  </div>
+
+  <div class="faq-container">
+    <div class="faq-item">
+      <h4>How do I apply the 10% discount on my order?</h4>
+      <p>Simply click any WhatsApp button on this page to initiate your chat. The 10% discount code will be automatically included with your order inquiry.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Do you provide bulk discounts for academies and sports clubs?</h4>
+      <p>Yes, we specialize in institutional wholesale orders for cricket academies, schools, gym studios, and tournament organizing committees.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Are your sports bats and gear match-certified?</h4>
+      <p>All our professional cricket, racket, and ball equipment are crafted strictly to official weight, dimension, and performance tournament standards.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================
+     LEGAL TERMS & AD POLICY DISCLAIMERS
+     ======================================================== -->
+<section class="legal-section" id="legal">
+  <div class="legal-container">
+    <div class="section-head" style="text-align: left; margin-bottom: 25px;">
+      <h2>Terms, Disclaimers & Operational Policies</h2>
+      <p>Mandatory regulatory disclosures for retail and wholesale sports gear commerce.</p>
+    </div>
+
+    <h3>1. Product Availability & Specifications</h3>
+    <p>Reddy Arena supplies athletic gear, protective sports equipment, and fitness accessories. Product specifications, weight tolerances, and willow grains are verified before dispatch. Images shown are for representative purposes.</p>
+
+    <h3>2. Pricing & Promotional Discounts</h3>
+    <p>The 10% introductory discount applies to qualifying product categories on direct WhatsApp confirmation. Bulk wholesale contract pricing may vary according to supply volume.</p>
+
+    <h3>3. Privacy & Data Handling</h3>
+    <p>We respect customer privacy. Information collected during inquiries or orders (such as contact numbers or delivery addresses) is strictly used for order processing and dispatch communication.</p>
+
+    <h3>4. Platform Advertising Policy Compliance</h3>
+    <p>Reddy Arena operates independently and adheres fully to Google Ads and Meta Advertising quality guidelines. Brand names and equipment trademarks remain the property of their respective manufacturers.</p>
+  </div>
+</section>
+
+<!-- ========================================================
+     BOTTOM CTA
+     ======================================================== -->
+<section class="cta-section">
+  <div class="cta-box">
+    <h2>Ready To Upgrade Your Athletic Gear?</h2>
+    <p>Contact Reddy Arena on WhatsApp now to get an instant equipment quote with your 10% discount applied.</p>
+    <a href="#" data-wa class="cta-btn-light" target="_blank" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i>
+      Order Now On WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- ========================================================
+     FOOTER
+     ======================================================== -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <div class="logo" style="margin-bottom:14px;color:#fff;">
+        <div class="logo-badge"><i class="fa-solid fa-dumbbell"></i></div>
+        Reddy <span>Arena</span>
+      </div>
+      <p>Your premier destination for pro-grade sports gear, fitness equipment, and tournament supply logistics.</p>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="#gear">Sports Equipment</a>
+        <a href="#process">How to Order</a>
+        <a href="#faq">FAQ</a>
+        <a href="#legal">Legal Disclaimers</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-links">
+        <a href="#gear">Cricket & Ball Sports</a>
+        <a href="#gear">Badminton & Tennis</a>
+        <a href="#gear">Gym & Fitness Sets</a>
+        <a href="#gear">Academy Bulk Supply</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact Arena Support</h4>
+      <p style="margin-bottom:8px;"><i class="fa-solid fa-phone" style="color:var(--accent-orange);margin-right:8px;"></i> Direct Assistance</p>
+      <p style="margin-bottom:8px;"><i class="fa-brands fa-whatsapp" style="color:var(--accent-orange);margin-right:8px;"></i> WhatsApp Active</p>
+      <p><i class="fa-solid fa-globe" style="color:var(--accent-orange);margin-right:8px;"></i> reddyarena.shop</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Reddy Arena. All Rights Reserved. Compliant with Advertising Policies.</p>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP ICON -->
+<a href="#" data-wa class="float-wa" target="_blank" rel="noopener" aria-label="Contact Reddy Arena on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- ========================================================
+     JAVASCRIPT LOGIC
+     ======================================================== -->
+<script>
+  const phoneNumber = "+918200297722"; // Update this with client's WhatsApp number
+  const message = encodeURIComponent("Hello Reddy Arena! I want Services.");
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+
+  // Assign WhatsApp URL to all [data-wa] links
+  document.querySelectorAll("[data-wa]").forEach(function(link) {
+    link.href = whatsappUrl;
+  });
+
+  // Modal Popup Logic
+  const autoModal = document.getElementById("autoModal");
+  const modalCard = document.getElementById("modalCard");
+  const modalCloseBtn = document.getElementById("modalCloseBtn");
+
+  // Show Modal Automatically on page load
+  window.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+      autoModal.classList.add("active");
+    }, 250);
+  });
+
+  // Click inside Modal Card -> Redirects to WhatsApp
+  modalCard.addEventListener("click", function(e) {
+    if (!e.target.closest("#modalCloseBtn")) {
+      window.open(whatsappUrl, "_blank");
+    }
+  });
+
+  // Close Modal on Button Click
+  modalCloseBtn.addEventListener("click", function(e) {
+    e.stopPropagation();
+    autoModal.classList.remove("active");
+  });
+
+  // Close Modal on Overlay Click (Outside Card)
+  autoModal.addEventListener("click", function(e) {
+    if (e.target === autoModal) {
+      autoModal.classList.remove("active");
+    }
+  });
+</script>
+
+</body>
+</html>
